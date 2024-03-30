@@ -1,0 +1,35 @@
+<!-- 
+    How to use DataTables (with Bootstrap 5) as follows:
+    Para documentacion:
+    SEE: https://datatables.net/examples/styling/bootstrap5.html
+
+    Implementacion de DataTable:
+    SEE: https://www.fundaofwebit.com/post/how-to-integrate-datatables-and-use-datatables-in-bootstrap-5
+    
+    A continuacion esta el link y los script para que la configuracion de Datatable este completa.
+    Es importante que el id del tag table tenga el valor de "myTable"
+    Now use this 'myTable' in the id attribute as id="myTable" in the html table tag as follows:    
+-->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+<!--
+    Una vez que el _stylesheet este incluido
+    incluir el id con el valor de "myTable" como se indica
+    <table class="table table-hover" id="myTable"> 
+    que debe it en el template
+    
+    y tambien, previo al tag </body> incluir
+    
+    <script>
+        $(document).ready( function () {
+            $('#myTable').DataTable({
+                lengthMenu: [1, 5, 10, 20, 50, 100, 200, 500],
+                language: { url: '//cdn.datatables.net/plug-ins/2.0.2/i18n/es-ES.json' }
+            });
+        }); 
+    </script>
+
+    completados los pasos, DataTable esta listo para funcionar.
+-->

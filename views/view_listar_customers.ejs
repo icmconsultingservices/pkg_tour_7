@@ -1,0 +1,54 @@
+<!-- view_listar_customers.ejs -->
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>view_listar_customers.ejs</title>
+    <%- include("_stylesheet") -%>
+    <%- include("_datatable_header") -%>
+</head>
+<body>
+    <div class="container">
+        <%- include("_navbar") -%>
+        <%- include("_navbar_destinos") -%>
+
+        <h1>Listar Customers (<%= model.length %>) - view_listar_customers.ejs</h1>
+        
+
+        <div class="table-responsive-sm">
+        <table class="table table-hover" id="myTable">
+
+    <thead>
+      <tr>
+        <th>Customer.id</th>
+        <th>Customer.first_name</th>
+        <th>Customer.last_name</th>
+        <th>Customer.address</th>
+        <th class="d-print-none">
+          <a class="btn btn-sm btn-success" href="/view_ingresar_datos_del_libro">Crear un Producto</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const customer of model) { %>
+        <tr>
+          <td><%= customer.id %></td>
+          <td><%= customer.first_name %>
+          <td><%= customer.last_name %></td>
+          <td><%= customer.address %></td>
+          <td class="d-print-none">
+            <a class="btn btn-sm btn-warning" href="/editar_un_libro/<%= customer.customer_id %>">Editar</a>
+            <a class="btn btn-sm btn-danger" href="/seleccionar_libro_eliminar/<%= customer.customer_id %>">Eliminar</a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+    </div>
+
+        <%- include("_footer") -%>
+    </div>
+    <%- include("_datatable_footer") -%>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- view_confirmar_eliminar_libro.ejs -->
+<!--
+    The "views/delete.ejs" and "views/_display.ejs" views
+    The main view to be able to delete a record must first display the information of the selected book to allow the user to confirm its deletion in full knowledge. It therefore looks a lot like the "edit.ejs" and "create.ejs" views.
+-->
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>view_confirmar_eliminar_libro.ejs</title>
+    <%- include("_stylesheet") -%>
+</head>
+<body>
+    <div class="container">
+        <%- include("_navbar") -%>
+
+        <h1>Desea eliminar el Libro? - view_confirmar_eliminar_libro.ejs</h1>
+        <div class="alert alert-warning mt-3 mb-3" role="alert">
+           <p>
+            ADVERTENCIA: Está a punto de eliminar un libro. Esta operación no se puede revertir.
+            </p>            
+        </div>
+
+        <form action="/eliminar_libro/<%= model.Book_id %>" method="post">
+  <div class="form-horizontal">
+
+    <%- include("_datos_del_libro.ejs") -%>
+
+    <div class="form-group row mt-3 mb-3">
+      <label class="col-form-label col-sm-2"></label>
+      <div class="col-sm-10">
+        <input type="submit" value="Confirmar Eliminar" class="btn btn-default btn-danger" />
+        <a class="btn btn-outline-dark cancel" href="/listar_libros">Cancelar</a>
+      </div>
+    </div>
+  </div>
+</form>
+
+        <%- include("_footer") -%>
+    </div>
+</body>
+</html>

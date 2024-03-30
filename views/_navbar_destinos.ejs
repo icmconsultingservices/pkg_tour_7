@@ -1,0 +1,119 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">A donde ir?</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Destinos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Africa</a></li>
+            <li><a class="dropdown-item" href="#">Australasia</a></li>
+            <li><a class="dropdown-item" href="#">America Central</a></li>
+            <li><a class="dropdown-item" href="#">Europa</a></li>
+            <li><a class="dropdown-item" href="#">Australasia</a></li>
+            <li><a class="dropdown-item" href="#">Medio Oriente</a></li>
+            <li><a class="dropdown-item" href="#">India</a></li>
+            <li><a class="dropdown-item" href="#">America del Sur</a></li>
+            <li><a class="dropdown-item" href="#">Asia</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Ir a otro destino</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Viajes
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Grupos</a></li>
+            <li><a class="dropdown-item" href="#">Privado</a></li>
+            <li><a class="dropdown-item" href="#">Familia</a></li>
+            <li><a class="dropdown-item" href="#">Estadias cortas</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Ir a otro destino</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Viajes temáticos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Navidad y Año Nuevo</a></li>
+            <li><a class="dropdown-item" href="#">Vacaciones de semana santa</a></li>
+            <li><a class="dropdown-item" href="#">Festivales</a></li>
+            <li><a class="dropdown-item" href="#">Fauna silvestre</a></li>
+            <li><a class="dropdown-item" href="#">Playa</a></li>
+            <li><a class="dropdown-item" href="#">Cultura</a></li>
+            <li><a class="dropdown-item" href="#">Comida y cocina</a></li>
+            <li><a class="dropdown-item" href="#">Senderismo y caminata</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Ir a otro destino</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Viajeros
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Consejos de viaje</a></li>
+            <li><a class="dropdown-item" href="#">Avisos de viaje por país</a></li>
+            <li><a class="dropdown-item" href="#">Sobre nuestros viajeros</a></li>
+            <li><a class="dropdown-item" href="#">Grupos</a></li>
+            <li><a class="dropdown-item" href="#">Viajeros solitarios</a></li>
+            <li><a class="dropdown-item" href="#">Parejas</a></li>
+            <li><a class="dropdown-item" href="#">Familias</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Ir a otro destino</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="text-danger">Ofertas</span>
+            <script>
+                let meses = new Array ("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+                let diasSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
+                let f = new Date();
+                //document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+                document.write(" <span class='text-danger'>de " + meses[f.getMonth()] + " - " + f.getFullYear() + " </span>");
+            </script>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Ofertas especiales</a></li>
+            <li><a class="dropdown-item" href="#">Ofertas de última hora</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Suscripción</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="text-primary">Productos</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/listar_productos">Listar_productos</a></li>
+            <li><a class="dropdown-item" href="#">...</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">otras opciones</a></li>
+          </ul>  
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="text-primary">Customers</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/listar_customers">Listar Customers</a></li>
+            <li><a class="dropdown-item" href="#">...</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">otras opciones</a></li>
+          </ul>  
+        </li>
+     
+     
+      </ul>
+    </div>
+  </div>
+</nav>

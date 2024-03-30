@@ -1,0 +1,29 @@
+<!--
+    Some views will use the partial view 
+    "_datos_del_libro.ejs" which contains the HTML code 
+    dedicated to the different input fields. 
+    This partial view will also be used a little further on to add a new record.
+-->
+
+<div class="form-group row mt-3 mb-3">
+  <label class="col-form-label col-sm-2" for="Title">Titulo</label>
+  <div class="col-sm-8">
+    <input autofocus class="form-control" name="Title" value="<%= model.Title %>" />
+  </div>
+</div>
+
+<div class="form-group row mt-3 mb-3">
+  <label class="col-form-label col-sm-2" for="Author">Autor</label>
+  <div class="col-sm-7">
+    <input class="form-control" name="Author" value="<%= model.Author %>" />
+  </div>
+</div>
+
+<div class="form-group row mt-3 mb-3">
+  <label class="col-form-label col-sm-2" for="Comments">Commentarios</label>
+  <div class="col-sm-10">
+    <textarea class="form-control" cols="20" name="Comments" maxlength="32000" rows="7">
+        <%= model.Comments %>
+    </textarea>
+  </div>
+</div>

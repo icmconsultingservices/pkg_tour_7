@@ -1,0 +1,51 @@
+<!-- view_listar_libros.ejs -->
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>view_listar_libros.ejs</title>
+    <%- include("_stylesheet") -%>
+    <%- include("_datatable_header") -%>
+
+</head>
+<body>
+    <div class="container">
+        <%- include("_navbar") -%>
+        <%- include("_navbar_destinos") -%>
+
+        <h1>Listar Libros (<%= model.length %>) - view_listar_libros.ejs</h1>
+
+        <div class="table-responsive-sm">
+  <table class="table table-hover" id="myTable">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Comments</th>
+        <th class="d-print-none">
+          <a class="btn btn-sm btn-success" href="/view_ingresar_datos_del_libro">Crear un libro</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const book of model) { %>
+        <tr>
+          <td><%= book.Title %></td>
+          <td><%= book.Author %></td>
+          <td><%= book.Comments %></td>
+          <td class="d-print-none">
+            <a class="btn btn-sm btn-warning" href="/editar_un_libro/<%= book.Book_id %>">Editar</a>
+            <a class="btn btn-sm btn-danger" href="/seleccionar_libro_eliminar/<%= book.Book_id %>">Eliminar</a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+
+        <%- include("_footer") -%>
+    </div>
+    <%- include("_datatable_footer") -%>
+</body>
+</html>

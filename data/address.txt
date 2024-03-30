@@ -1,0 +1,7 @@
+1,Address 1,Postal Code 1,District 1,2024-03-25,2024-03-25,2024-03-25
+2,Address 2,Postal Code 2,District 2,2024-03-25,2024-03-25,2024-03-25
+3,Address 3,Postal Code 3,District 3,2024-03-25,2024-03-25,2024-03-25
+4,Address 4,Postal Code 4,District 4,2024-03-25,2024-03-25,2024-03-25
+5,Address 5,Postal Code 5,District 5,2024-03-25,2024-03-25,2024-03-25
+6,Address 6,Postal Code 6,District 6,2024-03-25,2024-03-25,2024-03-25
+7,Address 7,Postal Code 7,District 7,2024-03-25,2024-03-25,2024-03-25

@@ -1,0 +1,31 @@
+<!-- pkg_tour/views/data.ejs -->
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Data</title>
+    <%- include("_stylesheet") -%>
+</head>
+<body>
+    <div class="container">
+        <%- include("_navbar") -%>
+
+        <h1><%= model.title %></h1>
+        <p>
+            Reserve las mejores cosas para hacer en 2024 en Corea del Sur. Tours y excursiones en Corea del Sur. Máxima flexibilidad: cancelación gratuita y reembolso completo si cancela hasta 24 horas antes.
+        </p>
+        <ul>
+
+            <% for (let i = 0; i < model.items.length; i++)
+                { %>
+                    <li><%= model.items[i] %></li>
+                <% } 
+            %>
+
+        </ul>
+
+        <%- include("_footer") -%>
+    </div>
+</body>
+</html>

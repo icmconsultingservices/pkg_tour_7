@@ -1,0 +1,62 @@
+<!--
+    Some views will use the partial view 
+    "_product_details.ejs" which contains the HTML code 
+    dedicated to the different input fields. 
+    This partial view will also be used a little further on to add a new record.
+-->
+
+<div class="form-group row mt-3 mb-3">
+  <label class="col-form-label col-sm-2" for="Image">Image</label>
+  <div class="col-sm-8">
+    <input autofocus class="form-control" name="image" value="<%= model.image %>" />
+  </div>
+</div>
+
+<div class="form-group row mt-3 mb-3">
+  <label class="col-form-label col-sm-2" for="Title">Title</label>
+  <div class="col-sm-7">
+    <input class="form-control" name="title" value="<%= model.title %>" />
+  </div>
+</div>
+
+<div class="form-group row mt-3 mb-3">
+  <label class="col-form-label col-sm-2" for="Price">Price</label>
+  <div class="col-sm-10">
+    <textarea class="form-control" cols="20" name="price" maxlength="32000" rows="2">
+        <%= model.price %>
+    </textarea>
+  </div>
+</div>
+
+
+<div class="form-group row mt-3 mb-3">
+  <label class="col-form-label col-sm-2" for="Description">Description</label>
+  <div class="col-sm-10">
+    <textarea class="form-control" cols="20" name="description" maxlength="32000" rows="2">
+        <%= model.description %>
+    </textarea>
+  </div>
+</div>
+
+
+<div class="form-group row mt-3 mb-3">
+  <label class="col-form-label col-sm-2" for="Published">Published</label>
+  <div class="col-sm-10">
+    <textarea class="form-control" cols="20" name="published" maxlength="32000" rows="2">
+        <%= model.published %>
+    </textarea>
+  </div>
+</div>
+
+
+<div class="form-floating">
+  <select class="form-select" id="floatingSelect" name="ReviewId" aria-label="Floating label select example">
+    <option selected>Open this select menu to choose ReviewId</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+    <option value="4">Four</option>
+    <option value="5">Five</option>
+  </select>
+  <label for="floatingSelect" class="text-danger">Actual review is <%= model.ReviewId %></label>
+</div>
