@@ -1,9 +1,7 @@
 //Review.js
 // Include Sequelize module. 
 const Sequelize = require('sequelize');
-const Datatypes = require('Sequelize');
 const path = require("path");
-
 
 // Import sequelize object, 
 // Database connection pool managed by Sequelize. 
@@ -21,7 +19,7 @@ const Review = db_sequelize.define('Review', {
 	id:{ 
 
 		// Sequelize module has INTEGER Data_Type. 
-		type:Datatypes.INTEGER, 
+		type:Sequelize.INTEGER, 
 
 		// To increment user_id automatically. 
 		autoIncrement:true, 
@@ -33,17 +31,17 @@ const Review = db_sequelize.define('Review', {
 		primaryKey:true
 	}, 
 
-    rating: { type: Datatypes.INTEGER, allowNull:true },
-    evaluation: { type: Datatypes.TEXT, allowNull:true },
+    rating: { type: Sequelize.INTEGER, allowNull:true },
+    evaluation: { type: Sequelize.TEXT, allowNull:true },
     
 	// dates => current time 
-	myDate: { type: Datatypes.DATE, 
+	myDate: { type: Sequelize.DATE, 
 			defaultValue: Sequelize.NOW }, 
 
 	// Timestamps 
-	createdAt: Datatypes.DATE, 
-	updatedAt: Datatypes.DATE, 
-}) 
+	createdAt: Sequelize.DATE, 
+	updatedAt: Sequelize.DATE, 
+}); 
 
 // Exporting Customer, using this constant 
 // we can perform CRUD operations on 
