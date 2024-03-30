@@ -3,7 +3,9 @@
 //Customer.js
 // Include Sequelize module. 
 const Sequelize = require('sequelize');
-const Datatypes = require('Sequelize');
+
+const Datatypes = require('sequelize');
+
 const path = require("path");
 
 
